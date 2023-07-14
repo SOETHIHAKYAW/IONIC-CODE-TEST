@@ -4,18 +4,19 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  // top: 50%;
+  // transform: translateY(-50%);
+  padding: 20px;
 }
 
 #container strong {
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 #container p {
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 2rem;
 
   color: #8c8c8c;
 
@@ -24,4 +25,49 @@
 
 #container a {
   text-decoration: none;
+}
+
+.row {
+  border: gainsboro solid 1px;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+// row color
+.ion-col {
+  // background-color: #11c8b2;
+  // border: solid 1px #11c8b2;
+  border-right: solid 1px #11c8b2 ;
+  // color: #11c8b2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.btn-adjest {
+  padding-top: 1em;
+}
+
+.title-solid {
+  border-left: 10px solid #0055ff;
+  padding: 10px 10px;
+  margin-left: 10px;
+  font-size: large;
+  text-align: center;
+}
+
+.title-btn {
+  float: right;
+  text-align: center;
+}
+
+.filter{
+ margin: 1rem;
+}
+
+.tool-bar {
+  padding: 1rem;
+}
+
+.label-pad {
+  padding: 1rem;
 }

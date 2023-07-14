@@ -1,20 +1,99 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Employee Management
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
+  <ion-toolbar class="tool-bar">
+      <span class="title-solid" size="large">Employee Management</span>
+    <!-- <ion-title class="title-solid" size="large">Employee Management</ion-title> -->
+    <div class="title-btn">
+      <ion-button class="filter">Filter</ion-button>
+      <ion-button routerLink="/create">New</ion-button>
+    </div>
+  </ion-toolbar>
+  
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div>
+      <ion-grid>
+        <ion-row class="row"  *ngFor="let employee of employeeList" size="6" size-sm="12">
+          <ion-col class="ion-col">{{employee.name}}</ion-col>
+          <ion-col class="ion-col">{{employee.department}}</ion-col>
+          <ion-col class="ion-col">{{employee.position}}</ion-col>
+          <ion-col class="ion-col">{{employee.mobile}}</ion-col>
+          <ion-col class="ion-col">{{employee.nrc}}</ion-col>
+          <ion-col class="ion-col">{{employee.salary | number}}</ion-col>
+          <ion-col class="ion-col">{{employee.dob | date: 'dd-MMM-yyyy'}}</ion-col>
+          <ion-col class="tool-bar">
+            <ion-label class="label-pad"><a (click)="deleteEmployee(employee)"><u>Delete</u></a></ion-label>
+            
+            <ion-label for="update" class="label-pad"><a (click)="updateEmp(employee.id)"><u>Update</u></a></ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <!-- ******************
+    <div class="row">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-col">Mg Mg</ion-col>
+          <ion-col class="ion-col">Java</ion-col>
+          <ion-col class="ion-col">Junior</ion-col>
+          <ion-col class="ion-col">0998111111</ion-col>
+          <ion-col class="ion-col">9/blahblah</ion-col>
+
+          <ion-col class="tool-bar">
+             
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="row">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-col">Mg Mg</ion-col>
+          <ion-col class="ion-col">Java</ion-col>
+          <ion-col class="ion-col">Junior</ion-col>
+          <ion-col class="ion-col">0998111111</ion-col>
+          <ion-col class="ion-col">9/blahblah</ion-col>
+
+          <ion-col class="tool-bar">
+           
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="row">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-col">Mg Mg</ion-col>
+          <ion-col class="ion-col">Java</ion-col>
+          <ion-col class="ion-col">Junior</ion-col>
+          <ion-col class="ion-col">0998111111</ion-col>
+          <ion-col class="ion-col">9/blahblah</ion-col>
+
+          <ion-col class="tool-bar">
+            
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+     -->
   </div>
 </ion-content>
+
+<!-- <ion-label class="label-pad" id="present-alert3"><a><u>Delete</u></a></ion-label>
+              <ion-alert
+                trigger="present-alert3"
+                header="Warning"
+                message="Are you sure to delete?"
+                [buttons]="alertButtons"
+              ></ion-alert>
+
+            <label for="update" class="label-pad"><a><u>Update</u></a></label> -->

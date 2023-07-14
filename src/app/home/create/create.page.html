@@ -1,0 +1,91 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar class="tool-bar">
+    <span class="title-solid" size="large">Employee New</span>
+</ion-toolbar>
+  <form (submit)="createEmployee()">
+    <div id="container">
+    <div class="card">
+      <ion-row>
+        <ion-col class="ion-margin">
+          Employee Name<span class="red">*</span>
+        </ion-col>
+        <ion-col>
+          <ion-input class="ion-margins" placeholder="Name" [(ngModel)]="name" name="name"></ion-input>
+        </ion-col>
+        <ion-col class="ion-margin">
+          Department Name<span class="red">*</span>
+        </ion-col>
+        <ion-col>
+          <ion-list>
+            <ion-item class="ion-select">
+              <ion-select label="Select Department" label-placement="floating" [(ngModel)]="department" name="department">
+                <ion-select-option value="Development">Development</ion-select-option>
+                <ion-select-option value="Management">Management</ion-select-option>
+                <ion-select-option value="Sale">Sale</ion-select-option>
+                <ion-select-option value="HR">HR</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-margin">
+          DOB
+        </ion-col>
+        <ion-col>
+          <ion-input class="ion-margins" value="{{ date | date: 'dd-MMM-yyyy' }}" id="date" fill="outline" placeholder="Enter DOB" 
+           name="date"> <i class="fa-thin fa-calendar-clock"></i></ion-input>
+          <ion-popover trigger="date" size="cover">
+            <ng-template>
+              <ion-datetime presentation="date" [(ngModel)]="date" name="date"></ion-datetime>
+            </ng-template>
+          </ion-popover>                  
+        </ion-col>
+        <ion-col class="ion-margin">
+          Position<span class="red">*</span>
+        </ion-col>
+        <ion-col>
+          <ion-list>
+            <ion-item class="ion-select" name="position">
+              <ion-select label="Select Position" label-placement="floating" [(ngModel)]="position" name="position">
+                <ion-select-option value="Manager">Manager</ion-select-option>
+                <ion-select-option value="Team Leader">Team Leader</ion-select-option>
+                <ion-select-option value="Senior">Senior</ion-select-option>
+                <ion-select-option value="Junior">Junior</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-margin">
+          NRC<span class="red">*</span>
+        </ion-col>
+        <ion-col>
+          <ion-input class="ion-margins" placeholder="NRC" [(ngModel)]="nrc" name="nrc"></ion-input>
+        </ion-col>
+        <ion-col class="ion-margin">
+          Salary<span class="red">*</span>
+        </ion-col>
+        <ion-col>
+          <ion-input class="ion-margins" placeholder="Salary" [(ngModel)]="salary" name="salary"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-margin">
+          Mobile<span class="red">*</span>
+        </ion-col>
+        <ion-col>
+          <ion-input class="ion-margins" placeholder="Mobile No" [(ngModel)]="mobile" name="mobile"></ion-input>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </div>
+    <div class="ion-btn">
+      <ion-button class="btn-cancel" routerLink="/">Cancel</ion-button>
+      <ion-button type="submit">Save</ion-button>
+    </div>
+  </div>
+  </form>
+</ion-content>

@@ -1,0 +1,60 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+    padding: 20px;
+  }
+  
+  .card {
+      border: gainsboro solid 1px;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+  
+  .title-solid {
+      border-left: 10px solid #0055ff;
+      padding: 10px 10px;
+      margin-left: 10px;
+      font-size: large;
+      text-align: center;
+  }
+  
+  .ion-margin {
+    margin-top: 3rem;
+  }
+  
+  .ion-margins {
+    margin-top: 1.1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: gainsboro solid 1px;
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .ion-select {
+    margin-top: 1rem;
+    border: gainsboro solid 1px;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .ion-btn {
+    float: right;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .btn-cancel {
+    margin-right: 2rem;
+  }
